@@ -32,7 +32,8 @@ window.addEventListener('load', () => {
     if (card) {
         const { offsetWidth, offsetHeight } = card; 
 
-        if (window.DeviceOrientationEvent) {
+        console.log(window.DeviceOrientationEvent)
+        if (!matchMedia('(pointer:fine)').matches && window.DeviceOrientationEvent) {
             let firstReading = true;
             let base = null;
             let timer = null;
